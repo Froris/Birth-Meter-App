@@ -13,9 +13,4 @@ const defaultMonthsListState = [
   {name: 'Декабрь', id:'12'}
 ];
 
-export default (state = defaultMonthsListState, action) => {
-  switch (action.type) {
-    default: 
-      return state;
-  }
-}
+export default (state = defaultMonthsListState, action) => state;
