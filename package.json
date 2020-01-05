@@ -22,10 +22,7 @@
   "homepage": "https://github.com/Froris/Birth-Meter-App#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "axios": "^0.19.0",
     "express": "^4.17.1",
-    "firebase": "^7.5.0",
-    "raf": "^3.4.1",
     "react": "^16.9.0",
     "react-dates": "^12.7.0",
     "react-dom": "^16.9.0",

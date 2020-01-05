@@ -1,0 +1,29 @@
+.peoples-list-wrapper {
+  width: 40vw;
+  height: 50vh;
+  margin-left: 2%;
+  h2 {
+    font-size: $l-size;
+  }
+}
+
+.peoples-list {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    li {
+      margin: 7px;
+      width: 13vw;
+      border-bottom: 3px solid black;
+        p:first-child {
+          font-size: 2rem;
+        }
+        p b {
+          color: rgb(54, 101, 255);
+        }
+  }
+}

@@ -6,7 +6,6 @@ class MonthItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      classes: ['low', 'little', 'medium', 'high'],
       months: [
         {name: 'Январь', id:'01'}, 
         {name: 'Февраль', id:'02'},
@@ -32,20 +31,25 @@ class MonthItem extends React.Component {
         
         <h2 className='total'>Общее количество: {amount}</h2>
         <ul className='months-list' onPointerOver={(e) => {
+          if(e.target.className.includes('item')){
             this.props.getFilteredData(e.target.id, this.props.peoples);
+          } else {
+            this.props.getFilteredData('MOUSE_LEAVE');
+          }
+            
         }}>
 
         { 
           this.state.months.map((el) => {
-            let classNameItem;
+            let classNameItem = 'item';
             if( amount <= 2 ){
-              classNameItem = 'low';
+              classNameItem = 'item low';
             } else if ( amount <= 6 ){
-              classNameItem = 'little';
+              classNameItem = 'item little';
             } else if( amount <= 10 ){
-              classNameItem = 'medium';
+              classNameItem = 'item medium';
             } else if( amount >= 11 ){
-              classNameItem = 'high';
+              classNameItem = 'item high';
             };
             
             return (

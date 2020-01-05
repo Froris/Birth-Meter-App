@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import MonthsListComponent from './MonthsListComponent';
 import PeoplesListComponent from './PeoplesListComponent';
 import startDataReciving from '../actions/getPeoplesData';
+import HeaderComponent from './HeaderComponent';
 
 class MainPage extends React.Component {
   componentDidMount(){
@@ -12,9 +13,11 @@ class MainPage extends React.Component {
   render(){
     return (
       <React.Fragment>
-        <h1>Hello, React!</h1>
-        <MonthsListComponent />
-        <PeoplesListComponent />
+        <HeaderComponent />
+        <div className='main-wrapper'>
+          <MonthsListComponent />
+          <PeoplesListComponent />
+        </div>
       </React.Fragment>
     )
   }
