@@ -1,30 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import MonthsListComponent from './MonthsListComponent';
+import MonthsListContainer from './MonthsListContainer';
 import PeoplesListComponent from './PeoplesListComponent';
 import startDataReciving from '../actions/getPeoplesData';
 import HeaderComponent from './HeaderComponent';
 
-class MainPage extends React.Component {
-  componentDidMount(){
-    this.props.startDataReciving('https://yalantis-react-school.herokuapp.com/api/task0/users');
-  }
+const MainPage = (props) => {
 
-  render(){
-    return (
-      <React.Fragment>
-        <HeaderComponent />
-        <div className='main-wrapper'>
-          <MonthsListComponent />
-          <PeoplesListComponent />
-        </div>
-      </React.Fragment>
-    )
-  }
+  useEffect(() => {
+    props.startDataReciving('https://yalantis-react-school.herokuapp.com/api/task0/users');
+  })
+  
+  return (
+    <React.Fragment>
+      <HeaderComponent />
+      <div className='main-wrapper'>
+        <MonthsListContainer 
+          amount={props.filteredData.length}
+          months={props.months}
+          peoples={props.peoples}
+        />
+        <PeoplesListComponent />
+      </div>
+    </React.Fragment>
+  )
 }
 
 const mapStateToProps = (state) => ({
-  peoples: state.peoples
+  peoples: state.peoples,
+  filteredData: state.filteredData,
+  months: state.months
 })
 
 const mapDispatchToProps = (dispatch) => ({
