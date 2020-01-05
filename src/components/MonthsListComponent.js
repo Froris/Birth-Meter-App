@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import getFilteredData from '../actions/getFilteredData';
 
 class MonthItem extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      months: [
+    constructor(props){
+      super(props);
+      this.months = [
         {name: 'Январь', id:'01'}, 
         {name: 'Февраль', id:'02'},
         {name: 'Март', id:'03'},
@@ -19,28 +18,27 @@ class MonthItem extends React.Component {
         {name: 'Октябрь', id:'10'},
         {name: 'Ноябрь', id:'11'}, 
         {name: 'Декабрь', id:'12'}
-      ]
-    };
-  }
+      ];
+    }
+    
+
 
   render(){
     const amount = this.props.filteredData.length;
-
+    
     return (
       <div className='months-list-wrapper'>
-        
         <h2 className='total'>Общее количество: {amount}</h2>
         <ul className='months-list' onPointerOver={(e) => {
           if(e.target.className.includes('item')){
             this.props.getFilteredData(e.target.id, this.props.peoples);
           } else {
             this.props.getFilteredData('MOUSE_LEAVE');
-          }
-            
+          }   
         }}>
 
         { 
-          this.state.months.map((el) => {
+          this.months.map((el) => {
             let classNameItem = 'item';
             if( amount <= 2 ){
               classNameItem = 'item low';
