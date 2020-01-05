@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import MainPage from './components/mainPage';
+import MainPage from './components/MainPage';
 import configureStore from './store/configureStore';
 import './styles/styles.scss';
 
