@@ -31,26 +31,21 @@ class MonthItem extends React.Component {
       <div className='months-list-wrapper'>
         
         <h2 className='total'>Общее количество: {amount}</h2>
-
         <ul className='months-list' onPointerOver={(e) => {
-          if(e.target.className.includes('item')){
             this.props.getFilteredData(e.target.id, this.props.peoples);
-          } else {
-            this.props.getFilteredData('MOUSE_LEAVE');
-          };
         }}>
 
         { 
           this.state.months.map((el) => {
-            let classNameItem = '';
-            if( this.props.filteredData <= 2 ){
-              classNameItem = 'item low';
-            } else if ( this.props.filteredData <= 6 ){
-              classNameItem = 'item little';
-            } else if( this.props.filteredData <= 10 ){
-              classNameItem = 'item medium';
-            } else if( this.props.filteredData >= 11 ){
-              classNameItem = 'item high';
+            let classNameItem;
+            if( amount <= 2 ){
+              classNameItem = 'low';
+            } else if ( amount <= 6 ){
+              classNameItem = 'little';
+            } else if( amount <= 10 ){
+              classNameItem = 'medium';
+            } else if( amount >= 11 ){
+              classNameItem = 'high';
             };
             
             return (
