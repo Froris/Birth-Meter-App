@@ -1,7 +1,7 @@
-const peoplesFetchDataSucces = (peoples) => (
+const peopleFetchDataSucces = (people) => (
   {
-    type: 'PEOPLES_FETCH_DATA_SUCCES',
-    peoples
+    type: 'PEOPLE_FETCH_DATA_SUCCES',
+    people
   }
 )
 
@@ -15,8 +15,8 @@ const startDataReciving = (url) => {
         return res;
       })
       .then( res => res.json())
-      .then( peoples => {
-        dispatch(peoplesFetchDataSucces(peoples))
+      .then( people => {
+        dispatch(peopleFetchDataSucces(people))
       });
   };
 };

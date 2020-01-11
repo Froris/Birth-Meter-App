@@ -11,7 +11,7 @@ const MonthsListContainer = (props) => {
       
       <ul className='months-list' onPointerOver={(e) => {
         e.target.className.includes('item') ? 
-          (props.getFilteredData(e.target.id, props.peoples)) : (props.getFilteredData('MOUSE_LEAVE'))
+          (props.getFilteredData(e.target.id, props.people)) : (props.getFilteredData('MOUSE_LEAVE'))
         }}>
         <MonthsListItems months={props.months} amount={props.amount} />  
       </ul>

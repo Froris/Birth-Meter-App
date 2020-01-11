@@ -1,6 +1,3 @@
 node_modules/
 .vscode/
-public/dist/boundle.js
-public/dist/boundle.js.map
-public/dist/styles.css
-public/dist/styles.css.map
+public/dist

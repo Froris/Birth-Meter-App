@@ -1,17 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { PeoplesListItem } from './PeoplesListItem'
+import { PeopleListItem } from './PeopleListItem'
 
-const PeoplesList = (props) => (
-  <div className='peoples-list-wrapper'>
+const PeopleList = (props) => (
+  <div className='people-list-wrapper'>
     <h2>Список:</h2>
-    <ul className='peoples-list'>
+    <ul className='people-list'>
       {
         props.filteredData.length === 0 ? (
           <p>No data</p>
         ) : (
           props.filteredData.map((el) => {
-            return <PeoplesListItem key={el.id} {...el} />
+            return <PeopleListItem key={el.id} {...el} /> 
           })
         )
       }          
@@ -20,9 +20,9 @@ const PeoplesList = (props) => (
 )
 
 const mapStateToProps = (state) => ({
-  peoples: state.peoples,
+  people: state.people,
   filter: state.filter,
   filteredData: state.filteredData
 })
 
-export default connect(mapStateToProps)(PeoplesList);
+export default connect(mapStateToProps)(PeopleList);

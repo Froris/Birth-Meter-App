@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import MonthsListContainer from './MonthsListContainer';
-import PeoplesListComponent from './PeoplesListComponent';
-import startDataReciving from '../actions/getPeoplesData';
+import PeopleListComponent from './PeopleListComponent';
+import startDataReciving from '../actions/getPeopleData';
 import HeaderComponent from './HeaderComponent';
 
 const MainPage = (props) => {
@@ -18,16 +18,16 @@ const MainPage = (props) => {
         <MonthsListContainer 
           amount={props.filteredData.length}
           months={props.months}
-          peoples={props.peoples}
+          people={props.people}
         />
-        <PeoplesListComponent />
+        <PeopleListComponent />
       </div>
     </React.Fragment>
   )
 }
 
 const mapStateToProps = (state) => ({
-  peoples: state.peoples,
+  people: state.people,
   filteredData: state.filteredData,
   months: state.months
 })
