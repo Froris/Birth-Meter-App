@@ -9,7 +9,7 @@ const MainPage = (props) => {
 
   useEffect(() => {
     props.startDataReciving('https://yalantis-react-school.herokuapp.com/api/task0/users');
-  })
+  }, [])
   
   return (
     <React.Fragment>
