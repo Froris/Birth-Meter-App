@@ -11,7 +11,7 @@ const MonthListItems = (props) => {
       classNameItem = 'item medium';
     } else if( props.amount >= 11 ){
       classNameItem = 'item high';
-    };
+    }
     
     return (
       <li 
