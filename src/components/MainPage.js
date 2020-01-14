@@ -16,11 +16,11 @@ const MainPage = (props) => {
       <HeaderComponent />
       <div className='main-wrapper'>
         <MonthsListContainer 
-          amount={props.filteredData.length}
+          amount={props.peopleList.length}
           months={props.months}
           people={props.people}
         />
-        <PeopleListComponent />
+        <PeopleListComponent peopleList={props.peopleList}/>
       </div>
     </React.Fragment>
   )
@@ -28,7 +28,7 @@ const MainPage = (props) => {
 
 const mapStateToProps = (state) => ({
   people: state.people,
-  filteredData: state.filteredData,
+  peopleList: state.peopleList,
   months: state.months
 })
 

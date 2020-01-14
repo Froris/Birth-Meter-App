@@ -10,7 +10,7 @@ export default () => {
   const store = createStore(
     combineReducers({
       people: peopleReducer,
-      filteredData: filteredDataReducer,
+      peopleList: filteredDataReducer,
       months: monthsListReducer
     }),
 
