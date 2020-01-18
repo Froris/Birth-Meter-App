@@ -8,7 +8,6 @@
 }
 
 .people-list { 
-  height: 80vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -25,5 +24,28 @@
         p b {
           color: rgb(54, 101, 255);
         }
+  }
+}
+
+@media screen and (min-width: 425px){
+  .people-list-wrapper {
+    width: 50vw;
+    height: 100vh;
+    h2 {
+      font-size: $m-size;
+    }
+  }
+  .people-list { 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+      li {
+        width: 40vw;
+        margin: 2px;
+        border-bottom-width: 2px;
+      p:first-child, p{
+        font-size: $s-size;
+      }
+    }
   }
 }

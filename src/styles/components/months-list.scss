@@ -48,7 +48,28 @@
     }
 }
 
-@media screen and (max-width: 1800px) {
+@media screen and (min-width: 425px){
+  .total {
+    font-size: $m-size;
+  }
+  .months-list-wrapper {
+    padding-right: 4%;
+  }
+  .months-list{
+    height: 35vh;
+    .item {
+      margin: 5px;
+      width: 16vw;
+      padding: 5px;
+      font-size: $m-size;
+      border-width: 1px;
+    }
+  }
+    
+   
+}
+
+@media screen and (min-width: 1800px) {
   .months-list {
     height: 60vh;
       .item {

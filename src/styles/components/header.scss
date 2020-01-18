@@ -8,3 +8,12 @@
       font-size: $xl-size;
     }
 }
+
+@media screen and (min-width: 425px){
+  .header{
+    padding: 20px;
+    h1{
+      font-size: $m-size;
+    }
+  }
+}
