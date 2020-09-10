@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 
-export const PeopleListItem = ({id, firstName, lastName, dob}) => (
+export const PeopleListItem = ({ id, name, dob }) => (
   <li key={id}>
-    <p><b>Name:</b> {`${firstName} ${lastName}`}</p>
-    <p><b>Date of birth:</b> {`${dob}`}</p>
+    <p>
+      <b>Name:</b> {`${name}`}
+    </p>
+    <p>
+      <b>Date of birth:</b> {`${dob}`}
+    </p>
   </li>
-)
+);

@@ -1,22 +1,19 @@
-const peopleFetchDataSucces = (people) => (
-  {
-    type: 'PEOPLE_FETCH_DATA_SUCCES',
-    people
-  }
-)
+import "../firebase/firebase";
 
-const startDataReciving = (url) => {
+const peopleFetchDataSucces = (people) => ({
+  type: "PEOPLE_FETCH_DATA_SUCCES",
+  people,
+});
+
+const startDataReciving = () => {
   return (dispatch) => {
-    fetch(url)
-      .then( res => {
-        if(!res.ok){
-          throw new Error(res.statusText);
-        }
-        return res;
-      })
-      .then( res => res.json())
-      .then( people => {
-        dispatch(peopleFetchDataSucces(people))
+    firebase
+      .database()
+      .ref("peopleList")
+      .once("value")
+      .then((data) => {
+        const people = data.val();
+        dispatch(peopleFetchDataSucces(people));
       });
   };
 };

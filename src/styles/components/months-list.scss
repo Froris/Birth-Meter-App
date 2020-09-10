@@ -14,48 +14,48 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   list-style: none;
   margin: 0;
   padding: 0;
-    .item {
-      text-align: center;
-      width: 10vw;
-      margin: 10px 0;
-      margin-left: 10%;
-      padding: 10px;
-      font-size: 2.3rem;
-      border: 4px solid rgb(59, 59, 59);
-      border-radius: 8px;
-        &:hover.low {
-          background-color: grey;
-          box-shadow: 2px 2px 2px 1px gray;
-        }
-        &:hover.little {
-          background-color: rgb(54, 101, 255);
-          box-shadow: 0 0 6px 2px rgb(54, 101, 255);
-          color: white;
-        }
-        &:hover.medium {
-          background-color: greenyellow;
-          box-shadow: 0 0 6px 2px greenyellow;
-          color: black;
-        }
-        &:hover.high {
-          background-color: tomato;
-          box-shadow: 0 0 6px 2px tomato;
-          color: white;
-        }
+  .item {
+    text-align: center;
+    width: 10vw;
+    margin: 10px 0;
+    margin-left: 10%;
+    padding: 10px;
+    font-size: 2.3rem;
+    border: 4px solid rgb(59, 59, 59);
+    border-radius: 8px;
+    &:hover.low {
+      background-color: grey;
+      box-shadow: 2px 2px 2px 1px gray;
     }
+    &:hover.little {
+      background-color: rgb(54, 101, 255);
+      box-shadow: 0 0 6px 2px rgb(54, 101, 255);
+      color: white;
+    }
+    &:hover.medium {
+      background-color: greenyellow;
+      box-shadow: 0 0 6px 2px greenyellow;
+      color: black;
+    }
+    &:hover.high {
+      background-color: tomato;
+      box-shadow: 0 0 6px 2px tomato;
+      color: white;
+    }
+  }
 }
 
-
-@media screen and (min-width: 425px){
+@media screen and (min-width: 320px) {
   .total {
     font-size: $m-size;
   }
   .months-list-wrapper {
     padding-right: 4%;
-    height: 40vh;
+    height: 100vh;
   }
   .months-list .item {
     margin: 5px;
@@ -66,13 +66,13 @@
   }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .total {
     font-size: $l-size;
   }
-  .months-list-wrapper{
+  .months-list-wrapper {
     padding: 0;
-    height: 45vh;
+    height: 40vh;
   }
   .months-list .item {
     margin: 10px;
@@ -83,10 +83,10 @@
   }
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1440px) {
   .months-list-wrapper {
     width: 35vw;
-    height: 60vh;
+    height: 50vh;
     margin-left: 2%;
   }
   .months-list .item {

@@ -1,4 +1,4 @@
-export default (filter, data) => ({
-  type: filter,
-  data
-})
+export default (month, data) => ({
+  type: month,
+  data,
+});

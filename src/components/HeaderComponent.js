@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export default () => (
-    <header className='header'>
-      <h1>Some awesome title</h1>   
-    </header>
-)
+  <header className="header">
+    <h1>BirthMeter</h1>
+  </header>
+);
